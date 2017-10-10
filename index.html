@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="userApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script src="https://unpkg.com/@ionic/core@0.0.2-20/dist/ionic.js"></script>
+  <title>Ionic Angular 1.x</title>
+</head>
+<body ng-controller="UserController as vm">
+
+  <ion-app>
+    <ion-page class="show-page">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Ionic 4 + Angular 1.6</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item ng-repeat="p in vm.people">
+            <ion-label>{{p.name}}</ion-label>
+          </ion-item>
+        </ion-list>
+     </ion-content>
+    </ion-page>
+  </ion-app>
+
+
+  <script src="user.module.js" type="module"></script>
+  <script src="user.controller.js" type="module"></script>
+  <script src="user.service.js" type="module"></script>
+</body>
+</html>
